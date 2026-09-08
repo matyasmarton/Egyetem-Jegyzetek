@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BBS és a fősodor — jegyzetek</title>
+<!--
+  Main / front-door page for the course site.
+  Redirects to the course's lesson page. On GitHub the course lives in
+  the subfolder "flmd16-212.30_bbs-es-a-fosodor", i.e.
+      https://<site>/flmd16-212.30_bbs-es-a-fosodor/
+
+  REDIRECT TARGET — one place to change it. The target below is written
+  relative to THIS page (this page sits in /mainsite/, one level above
+  the course folder, so ../ reaches the site root). It works both when
+  the page is opened locally and when the folder tree is published.
+
+  * If the main page will instead be published at the site ROOT
+    (no /mainsite/ level), use  /flmd16-212.30_bbs-es-a-fosodor/
+  * If you prefer a full URL once the site's domain is known, use
+    e.g.  https://user.github.io/flmd16-212.30_bbs-es-a-fosodor/
+  Keep meta refresh, the fallback link and the script in sync.
+-->
+<meta http-equiv="refresh" content="0; url=../flmd16-212.30_bbs-es-a-fosodor/index.html">
+<style>
+body {
+	font-family: 'Oswald', sans-serif;
+	}
+
+#maincontent {
+	margin: 12% auto;
+	width: 50%;
+	text-align: center;
+	}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: 700;
+	margin: 0 0 0.6em;
+	}
+
+p {
+	font-size: 1.2em;
+	}
+
+a {
+	color: #9a3324;
+	}
+
+.code {
+	font-size: 1em;
+	color: #672218;
+	letter-spacing: 0.08em;
+	margin-bottom: 1.2em;
+	}
+
+.button2 {
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+	-ms-transition: background-color .25s ease-in-out;
+	transition: background-color .25s ease-in-out;
+	-webkit-appearance: none;
+	display: inline-block;
+	background: #9a3324;
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	padding: 0.4em 1.2em;
+	font-size: 1.2em;
+	}
+	.button2:hover,
+	.button2:active {
+		background: #672218;
+	}
+
+	.button2:focus-visible,
+	a:focus-visible {
+		outline: 2px solid #9a3324;
+		outline-offset: 2px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.button2 {
+			transition: none;
+			}
+	}
+
+@media screen and (max-width: 736px) {
+	#maincontent {
+		margin: 20% auto;
+		width: 90%;
+		}
+	}
+</style>
+</head>
+<body>
+<div id="maincontent">
+<h1>BBS és a fősodor</h1>
+<p class="code">FLMD16-212.30</p>
+<p>Átirányítás a jegyzetekhez…</p>
+<p><a class="button2" href="../flmd16-212.30_bbs-es-a-fosodor/index.html">Jegyzetek megnyitása</a></p>
+</div>
+<script>
+	// REDIRECT TARGET — see the comment in <head> for alternatives
+	window.location.replace('../flmd16-212.30_bbs-es-a-fosodor/index.html');
+</script>
+</body>
+</html>
