@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Órai jegyzetek</title>
+<!--
+  Front-door page: lists the available courses so visitors can choose
+  which notes to open. Same design as the reference (design-reference.html)
+  and the generated lesson pages — the stylesheet below is identical to
+  the one convert_fancy.py emits.
+
+  To add another course: copy the <details class="dropdown"> block below,
+  edit the title / course code / link, and paste it in. Leave it without
+  the "open" attribute unless you want it expanded by default.
+-->
+<style>
+body {
+	font-family: 'Oswald', sans-serif;
+	}
+
+p {
+	font-size: 1.2em;
+	}
+
+a {
+	text-decoration: none;
+	font-size: 1.2em;
+	overflow-wrap: anywhere;
+	color: #9a3324;
+	}
+
+a:not(.button2):hover {
+	text-decoration: underline;
+	}
+
+#maincontent {
+	margin: 5% auto;
+	width: 50%;
+	}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+
+ul li {
+	margin-bottom: 0.5em;
+	}
+
+ul ul {
+	margin-top: 0.5em;
+	padding-left: 1.5em;
+	}
+
+h1 {
+	font-size: 1.6em;
+	font-weight: 700;
+	margin: 0 0 0.2em;
+	}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: 700;
+	border-top: 1px solid #ddd;
+	margin-top: 2em;
+	padding-top: 1.5em;
+	}
+
+h3 {
+	font-size: 1.15em;
+	font-weight: 700;
+	margin: 1.5em 0 0.5em;
+	}
+details.dropdown {
+	border: 1px solid #ddd;
+	border-left: 3px solid #9a3324;
+	margin: 0.75em 0;
+	}
+
+details.dropdown summary {
+	cursor: pointer;
+	padding: 0.6em 0.8em;
+	list-style: none;
+	}
+details.dropdown summary:hover {
+	background: #faf6f5;
+	}
+
+details.dropdown[open] {
+	border-left-color: #672218;
+	}
+
+details.dropdown summary::-webkit-details-marker {
+	display: none;
+	}
+
+details.dropdown summary h3 {
+	display: inline;
+	margin: 0;
+	}
+
+details.dropdown summary::before {
+	content: "+";
+	display: inline-block;
+	width: 0.9em;
+	margin-right: 0.4em;
+	font-weight: 700;
+	color: #9a3324;
+	}
+
+details.dropdown[open] summary::before {
+	content: "\2013";
+	}
+
+details.dropdown[open] summary {
+	border-bottom: 1px solid #ddd;
+	}
+
+details.dropdown > ul {
+	padding: 0.8em;
+	}
+
+.button2 {
+	-moz-transition: background-color .25s ease-in-out;
+	-webkit-transition: background-color .25s ease-in-out;
+	-ms-transition: background-color .25s ease-in-out;
+	transition: background-color .25s ease-in-out;
+	-webkit-appearance: none;
+	display: inline-block;
+	background: #9a3324;
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	padding: 0.2em 0.8em;
+	}
+	.button2:hover,
+	.button2:active {
+		background: #672218;
+	}
+
+	summary:focus-visible,
+	.button2:focus-visible,
+	a:focus-visible {
+		outline: 2px solid #9a3324;
+		outline-offset: 2px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.button2 {
+			transition: none;
+			}
+	}
+
+@media screen and (max-width: 736px) {
+	#maincontent {
+		margin: 10% auto;
+		width: 90%;
+		}
+	p {
+		font-size: 1em;
+		}
+	a {
+		font-size: 0.8em;
+		}
+	img {
+		width: 66%;
+		}
+	.button2 {
+		font-size: 1em;
+		padding: 0.8em 1.2em;
+		}
+	}
+
+/* ---- same class-notes extensions as the generated lesson pages ---- */
+
+details.dropdown > .body {
+	padding: 0.3em 0.9em 0.9em;
+	}
+
+details.dropdown > .body > p {
+	margin: 0.6em 0;
+	}
+
+details.dropdown > .body > ul {
+	margin: 0.4em 0 0.7em;
+	}
+
+details.dropdown .body li ul {
+	margin-bottom: 0.5em;
+	}
+</style>
+</head>
+<body>
+<div id="maincontent">
+<h1>Órai jegyzetek</h1>
+<p>Válassz kurzust a jegyzetek megnyitásához.</p>
+
+<!-- one dropdown per course; first one opens by default -->
+<details class="dropdown" open>
+	<summary><h3>BBS és a fősodor</h3></summary>
+	<div class="body">
+		<ul>
+			<li>FLMD16-212.30</li>
+			<li><a class="button2" target="_blank" rel="noopener" href="../flmd16-212.30_bbs-es-a-fosodor/index.html">Jegyzetek megnyitása</a></li>
+		</ul>
+	</div>
+</details>
+</div>
+</body>
+</html>
